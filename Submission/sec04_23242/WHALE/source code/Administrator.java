@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Administrator extends User {
     // Private attributes
     public String username;
-    private String position;
+    private String job;
     private ArrayList<Student> stud;
     private Scholarship scholar;
     private Apply application;
@@ -12,11 +12,11 @@ public class Administrator extends User {
 
     public Administrator(){}
     
-    public Administrator(String fn, String ln, int a, String em, Address add, String username, String position,
+    public Administrator(String fn, String ln, int a, String em, Address add, String username, String job,
             ArrayList<Student> stud, Scholarship scholar, Apply application) {
         super(fn, ln, a, em, add);
         this.username = username;
-        this.position = position;
+        this.job = job;
         stud = new ArrayList<>();
         this.scholar = scholar;
         this.application = application;
@@ -27,7 +27,7 @@ public class Administrator extends User {
     }
 
     public void setJob(String j) {
-        position = j;
+        job = j;
     }
 
     public String getusername() {
@@ -35,7 +35,7 @@ public class Administrator extends User {
     }
 
     public String getJob() {
-        return position;
+        return job;
     }
 
     public void evaluateStudent(Student st) {
@@ -44,14 +44,6 @@ public class Administrator extends User {
 
     @Override
     public String toString() {
-        return super.toString() + " Admin username: " + username + "\nPosition: " + position;
-    }
-
-    public void display(){
-        System.out.println("Full Name: " + super.fName + " " + super.lName);
-        System.out.println("Position: " + position);
-        System.out.println("Age: " + super.getAge());
-        System.out.println("Email: " + super.getEmail());    
-        System.out.println("Address: " + super.add.toString());
+        return super.toString() + " Admin username: " + username + " Job: " + job;
     }
 }

@@ -25,8 +25,4 @@ public class User {
     public int getAge() {
         return age;
     }
-    
-    public String getEmail(){
-        return email ;
-    }
 }
